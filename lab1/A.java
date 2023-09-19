@@ -1,3 +1,9 @@
+/*
+A. Use appropriate tool to find Host name, IP address, physical
+address, subnet mask, default gateway etc [hint: Ipconfig]. Explore
+different options available with the tool.
+*/
+
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Enumeration;
