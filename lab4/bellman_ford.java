@@ -1,3 +1,5 @@
+//bellman ford algorithm for shortest distance from a source node to all the remaining nodes
+
 import java.util.Arrays; 
 import java.util.Scanner; 
 public class BellmanFord { 
