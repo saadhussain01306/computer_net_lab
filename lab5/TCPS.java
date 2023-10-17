@@ -28,4 +28,4 @@ import java.io.*;
         }
     }
 
-/*first the server port should be established before the it accepts any request from the client*/  
+/*first the server port should be established before it accepts any request from the client*/  
