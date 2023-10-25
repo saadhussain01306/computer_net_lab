@@ -43,6 +43,6 @@ javac TCPC.java
 saad@saad-VirtualBox:~/com_net$ java TCPC
 Enter the filename
 text.txt
-This the file server requested from the server....
+This the file client requested from the server....
 */
   
