@@ -40,7 +40,7 @@ Connection Is successful and waiting for the client request
 CLIENT program
 in new terminal window
 javac TCPC.java
-java TCPC
+ java TCPC
 Enter the filename
 text.txt
 This the file client requested from the server....
