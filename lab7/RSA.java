@@ -1,3 +1,5 @@
+/*Write a program for simple RSA algorithm to encrypt and decrypt the data.*/
+
 /*RSA algorithm*/
 import java.io.BufferedReader;
 import java.io.IOException;
