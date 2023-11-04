@@ -76,9 +76,7 @@ TimeΔt  Tokens Requested    Tokens Sent   Tokens Remaining in bucket
 4             2                    0       5
 5             2                    0       5
 6             2                    0       5
-*/
-    }
-}
+*/    
 
 /*OUTPUT:-
 Enter the bucket capacity
