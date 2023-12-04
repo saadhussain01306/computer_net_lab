@@ -100,3 +100,4 @@ $ns at 25.1 "$ftp1 stop"
 $ns at 25.2 "Finish"
 
 #Run the simulation
+$ns run
