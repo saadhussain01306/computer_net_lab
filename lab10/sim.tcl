@@ -1,6 +1,6 @@
-#Implement three nodes point – to – point network with duplex 
-#links between them. Set the queue size, vary the bandwidth and find 
-#the number of packets dropped.
+# Implement three nodes point – to – point network with duplex 
+# links between them. Set the queue size, vary the bandwidth and find 
+# the number of packets dropped.
 
 #S_HUSSAIN
 
@@ -64,3 +64,4 @@ $ns at 0.0 "$cbr0 start"
 $ns at 5.0 "Finish"
 #Run the Simulation
 $ns run
+
