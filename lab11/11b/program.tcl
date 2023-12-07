@@ -128,3 +128,14 @@ $ns at 70 "$n4 set dest 100 60 20"
 $ns at 100 "$n4 set dest 700 300 20"
 $ns at 150 "$n4 set dest 900 200 20"
 $ns run
+
+# output:-
+# ns p4.tcl
+# warning: Please use -channel as shown in tcl/ex/wireless-mitf.tcl
+# num_nodes is set 6
+# INITIALIZE THE LIST xListHead
+# channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+# highestAntennaZ_ = 1.5,  distCST_ = 550.0
+# SORTING LISTS ...DONE!
+# Number of packets dropped is:
+# root@calab:/home/cslab# 15605
