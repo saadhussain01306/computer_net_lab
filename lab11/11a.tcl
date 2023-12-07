@@ -115,3 +115,18 @@ $ns at 25.2 "Finish"
 
 # Run the simulation
 $ns run
+
+
+
+# output:-
+# ns prog5.tcl
+# warning: no class variable LanRouter::debug_
+
+# 	see tcl-object.tcl in tclcl for info about this warning.
+
+# root@calab:/home/cslab# XGraph v4.38
+# Gtk-Message: 12:59:21.873: Failed to load module "canberra-gtk-module"
+# Window (704 x 465)
+# 498 points read.
+# GUI was FORCED to EXIT by window-manager ...
+# Exiting XGraph.
