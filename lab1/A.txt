@@ -1,0 +1,15 @@
+Use appropriate tool to find the Host name, IP address, physical address, subnet mask, default gateway etc. Explore different options available with the tool.
+Command used: ipconfig
+The 'ipconfig' function displays a current configuration for a network interface when no optional parameters are supplied.
+
+Options used:
+ipconfig -a: Displays information about all interfaces in the system
+ipconfig -d: Displays the interfaces that are down
+ipconfig -l: Lists all available interfaces on system with no other additional information 
+ipconfig -u: Displays the interfaces that are up
+ipconfig protocol family: Specifies protocols such as TCP, UDP, TCPS, UDPS, ICMP and ICMPS
+ipconfig interface address: Specifies the network address for the network interface
+ipconfig interface down: Marks an interface as inactive(down), which keeps the system from trying to transmit messages through that interface
+ipconfig interface up: Marks an interface as active(up)
+ipconfig interface detach: Removes an interface from network interface list
+ipconfig interface delete: Removes the specified network address
