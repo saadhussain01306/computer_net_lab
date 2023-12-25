@@ -1,79 +1,90 @@
 //Write a program for error detecting code using CRC-CCITT(16-bits)
 
-
 import java.util.Scanner;
 
-public class CRCCode {
-    public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        System.out.println("Enter the data and key values");
-        String data = in.next();
-        String key = in.next();
-        System.out.println("At Sender side");
-        EncodeData(data, key);
-        System.out.println("At Receiver side");
-        System.out.println("Enter the code word received");
-        String rec=in.next();
-         int i= data.length() + key.length() - 1;
-        if(rec.length()> i ||rec.length()< i) {
-            System.out.println("Enter a valid received codeword");
-        }else Receiver(rec,key);
-    }
-    private static void EncodeData(String data, String key) {
-        int len = key.length();
-        String str=new String(new char[len - 1]);
-        String append = (data + str.replace("\0", "0"));
-        String remainder = Mod2Division(append, key);
-        String codeword = data + remainder;
-        System.out.println("Remainder : " + remainder);
-        System.out.println("CodeWord encoded is : " + codeword);
-    }
+public class CRC1 {
 
-    private static void Receiver(String data, String key) {
-        String curXor = Mod2Division(data.substring(0, key.length()), key);
-        int curr = key.length();
-        while (curr != data.length()) {
-            if (curXor.length() != key.length())
-                curXor += data.charAt(curr++);
-            else curXor = Mod2Division(curXor, key);
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("At Sender Side: ");
+        // Input Data Stream
+        System.out.print("Enter message bits: ");
+        String message = sc.nextLine();
+        System.out.print("Enter generator: ");
+        String generator = sc.nextLine();
+
+        int data[] = new int[message.length() + generator.length() - 1];
+        int divisor[] = new int[generator.length()];
+
+        for (int i = 0; i < message.length(); i++)
+            data[i] = Integer.parseInt(message.charAt(i) + "");
+
+        for (int i = 0; i < generator.length(); i++)
+            divisor[i] = Integer.parseInt(generator.charAt(i) + "");
+
+        // Calculation of CRC
+        for (int i = 0; i < message.length(); i++) {
+            if (data[i] == 1)
+                for (int j = 0; j < divisor.length; j++)
+                    data[i + j] ^= divisor[j];
         }
-        if (curXor.length() == key.length())
-            curXor = Mod2Division(curXor, key);
-        if (curXor.contains("1"))
-            System.out.println("Error has occurred. Incorrect codeword received");
-        else System.out.println("No error. Correct message received");
-    }
 
-    private static String Mod2Division(String dividend, String divisor) {
-        int pick = divisor.length();
-        String temp = dividend.substring(0, pick);
-        int n = dividend.length();
-        while (pick < n) {
-            if (temp.charAt(0) == '1')
-                temp = Xor(divisor, temp) + dividend.charAt(pick);
-            else {
-                String str=new String(new char[pick]);
-                temp = Xor(str.replace("\0", "0"), temp) + dividend.charAt(pick);
+        // Display CRC
+        System.out.print("The checksum code is: ");
+        for (int i = 0; i < message.length(); i++)
+            System.out.print(data[i]);
+        System.out.println();
+
+        System.out.println("At Receiver Side: ");
+        // Check for input CRC code
+        System.out.print("Enter checksum code: ");
+        message = sc.nextLine();
+        System.out.print("Enter generator: ");
+        generator = sc.nextLine();
+
+        data = new int[message.length() + generator.length() - 1];
+        divisor = new int[generator.length()];
+
+        for (int i = 0; i < message.length(); i++)
+            data[i] = Integer.parseInt(message.charAt(i) + "");
+
+        for (int i = 0; i < generator.length(); i++)
+            divisor[i] = Integer.parseInt(generator.charAt(i) + "");
+
+        // Calculation of remainder
+        for (int i = 0; i < message.length(); i++) {
+            if (data[i] == 1)
+                for (int j = 0; j < divisor.length; j++)
+                    data[i + j] ^= divisor[j];
+        }
+
+        // Display validity of data
+        boolean valid = true;
+        for (int i = 0; i < data.length; i++)
+            if (data[i] == 1) {
+                valid = false;
+                break;
             }
-            pick += 1;
-        }
-        if (temp.charAt(0) == '1')
-            temp = Xor(divisor, temp);
-        else {
-            String str=new String(new char[pick]);
-            temp = Xor(str.replace("\0", "0"), temp);
-        }
-        return temp;
-    }
 
-    private static String Xor(String divisor, String temp) {
-        StringBuilder result = new StringBuilder();
-        int n = temp.length();
-        for (int i = 1; i < n; i++) {
-            if (divisor.charAt(i) == temp.charAt(i))
-                result.append("0");
-            else result.append("1");
-        }
-        return result.toString();
+        if (valid)
+            System.out.println("Data stream is valid");
+        else
+            System.out.println("Data stream is invalid. CRC error occurred.");
     }
 }
+
+
+/* the generator bit shoulb be same for both sender and receiver side to check the correctness of the code*/
+/*
+output:-
+At Sender Side: 
+Enter message bits: 11011101
+Enter generator: 01101
+The checksum code is: 10101001
+At Receiver Side: 
+Enter checksum code: 10101110
+Enter generator: 01101
+Data stream is invalid. CRC error occurred.
+*/
