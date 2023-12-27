@@ -2,8 +2,6 @@
 # links between them. Set the queue size, vary the bandwidth and find 
 # the number of packets dropped.
 
-#S_HUSSAIN
-
 #Create Simulator
 set ns [new Simulator]
 #Open Trace file and NAM file
