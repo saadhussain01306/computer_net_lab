@@ -1,12 +1,10 @@
 /*Write a program for simple RSA algorithm to encrypt and decrypt the data.*/
 
 /*RSA algorithm*/
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.util.Random;
+import java.io.*;
+import java.math.*;
+import java.nio.charset.*;
+import java.util.*;
 
 public class RSA{
     private BigInteger p, q, N, phi, e, d;
@@ -61,7 +59,6 @@ public class RSA{
         return (new BigInteger(message)).modPow(d, N).toByteArray();
     }
 }
-
 
 /*OUTPUT:-
 Prime number p is 135300281134717879746902808366541099903975251288789284334641807832207682871127271567920761055463729098924430287718421850746198499428795090338316070179909825871150136529664667741679224565002205330126017727809227066298450635996226617624131459287230966759830732923433622770966482580389693040579733621803440243969
