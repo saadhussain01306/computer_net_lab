@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+/*Write a program to sort frames using appropriate sorting techniques*/
+import java.util.*;
 
 public class sort1 {
     public static void main(String[] args) {
@@ -38,26 +35,25 @@ public class sort1 {
     }
 }
 
-
-/* output:-
+/*output
 Enter no. of frames:
 4
-Enter data for 1th frame>>213
-Enter data for 2th frame>>211
-Enter data for 3th frame>>567
-Enter data for 4th frame>>290
+Enter data for 1th frame>>342
+Enter data for 2th frame>>256
+Enter data for 3th frame>>890
+Enter data for 4th frame>>356
 
 
 Before Sorting>>
-seqNum->385, Data->213
-seqNum->417, Data->211
-seqNum->265, Data->567
-seqNum->109, Data->290
+seqNum->703, Data->342
+seqNum->654, Data->256
+seqNum->704, Data->890
+seqNum->876, Data->356
 
 
  After sorting>>
-seqNum->109, Data->290
-seqNum->265, Data->567
-seqNum->385, Data->213
-seqNum->417, Data->211
+seqNum->654, Data->256
+seqNum->703, Data->342
+seqNum->704, Data->890
+seqNum->876, Data->356
 */
