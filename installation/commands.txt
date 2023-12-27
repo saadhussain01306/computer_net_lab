@@ -1,0 +1,7 @@
+ sudo apt-get install ns2 
+
+dont install nam from apt-get. the xgraph wont work
+
+sudo dpkg --install ./nam_1.14_amd64.deb
+  
+sudo apt install ./xgraph_12.1-17_amd64.deb
