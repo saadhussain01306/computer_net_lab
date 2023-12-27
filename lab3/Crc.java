@@ -80,6 +80,8 @@ public class CRC {
     }
 }
 
+// fix the generator same at both sender and receiver side
+
 // output:-
 // At Sender Side: 
 // Enter message bits: 100100
