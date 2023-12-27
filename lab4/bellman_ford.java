@@ -66,3 +66,13 @@ Vertex   Distance from Source
 4               7
 5               2
 */
+
+/*
+Enter the number of Vertices : 3
+Enter the Weight Matrix of Graph
+0 10 0
+0 0 20
+0 0 -30
+Enter the Source Vertex : 1
+Negative weight cycle detected.
+*/
