@@ -1,7 +1,9 @@
+/*Write a program to find the shortest path between vertices using 
+bellman-ford algorithm.*/
+
 //bellman ford algorithm for shortest distance from a source node to all the remaining nodes
 
-import java.util.Arrays; 
-import java.util.Scanner; 
+import java.util.*;
 public class BellmanFord { 
          private static int N; 
          private static int[][] graph; 
@@ -48,6 +50,7 @@ public class BellmanFord {
               bellmanFord(source - 1); 
       } 
    } 
+
 
 
 /*output:-
