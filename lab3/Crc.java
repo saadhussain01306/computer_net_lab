@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class CRC1 {
+public class CRC {
 
     public static void main(String args[]) {
 
@@ -26,14 +26,19 @@ public class CRC1 {
 
         // Calculation of CRC
         for (int i = 0; i < message.length(); i++) {
-            if (data[i] == 1)
+            if (data[i] == 1) {
                 for (int j = 0; j < divisor.length; j++)
                     data[i + j] ^= divisor[j];
+            }
         }
+
+        // Append the remainder to the original message
+        for (int i = 0; i < message.length(); i++)
+            data[i] = Integer.parseInt(message.charAt(i) + "");
 
         // Display CRC
         System.out.print("The checksum code is: ");
-        for (int i = 0; i < message.length(); i++)
+        for (int i = 0; i < data.length; i++)
             System.out.print(data[i]);
         System.out.println();
 
@@ -75,16 +80,12 @@ public class CRC1 {
     }
 }
 
-
-/* the generator bit shoulb be same for both sender and receiver side to check the correctness of the code*/
-/*
-output:-
-At Sender Side: 
-Enter message bits: 11011101
-Enter generator: 01101
-The checksum code is: 10101001
-At Receiver Side: 
-Enter checksum code: 10101110
-Enter generator: 01101
-Data stream is invalid. CRC error occurred.
-*/
+// output:-
+// At Sender Side: 
+// Enter message bits: 100100
+// Enter generator: 1101
+// The checksum code is: 100100001
+// At Receiver Side: 
+// Enter checksum code: 11011
+// Enter generator: 1101
+// Data stream is invalid. CRC error occurred.
