@@ -53,11 +53,6 @@
   <p>a. Implement and study the performance of GSM on NS2/NS3 (Using MAC layer) or equivalent environment.</p>
   <p>b. Implement and study the performance of CDMA on NS2/NS3 (Using stack called Call net) or equivalent environment.</p>
 
-  <h3>Usage</h3>
-  <p>Each part and task can be found in the corresponding directories. Follow the instructions within the source code for execution and usage details.</p>
-
-  <h3>License</h3>
-  <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 
 </body>
 
