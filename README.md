@@ -1,33 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computer Networks Laboratory - Readme</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      color: #333;
-    }
-
-    pre {
-      background-color: #f8f8f8;
-      border: 1px solid #ddd;
-      padding: 10px;
-      overflow: auto;
-    }
-  </style>
-</head>
-
 <body>
 
   <h1>Computer Networks Laboratory</h1>
