@@ -22,7 +22,7 @@ public class Main {
             buf[i] = in.nextInt();
         }
 
-        System.out.println(String.format("%s\t%s\t%s\t%s\t%s","TimeΔt","P_size","accepted","sent","remaining"));
+        System.out.println(String.format("%s\t\t%s\t\t%s\t%s\t%s","Time_t","P_size","accepted","sent","remaining"));
 
         for (int i = 0; i < n; i++) {
             if (buf[i] != 0) {
@@ -49,13 +49,15 @@ public class Main {
             }
 
             if (received == -1) {
-                System.out.println(String.format("%d\t%d\t%s\t%d\t%d", i + 1, buf[i], "dropped", sent, bucket_remaining));
+                System.out.println(String.format("%d\t\t%d\t\t%s\t\t%d\t\t%d", i + 1, buf[i], "dropped", sent, bucket_remaining));
             } else {
-                System.out.println(String.format("%d\t%d\t%d\t%d\t%d", i + 1, buf[i], received, sent, bucket_remaining));
+                System.out.println(String.format("%d\t\t%d\t\t%d\t\t%d\t\t%d", i + 1, buf[i], received, sent, bucket_remaining));
             }
         }
     }
 }
+
+
 
 /*output:-
   Enter the bucket capacity
