@@ -27,7 +27,7 @@ public class Token_bucket{
                 token_sent=token_requested;
                 token_remaining+=token_requested;
             }
-            System.out.println(String.format("%d\t%d\t%d\t%d", i + 1, token_requested, token_sent, token_remaining));
+            System.out.println(String.format("%d\t\t%d\t\t%d\t\t%d", i + 1, token_requested, token_sent, token_remaining));
         }
     }
 }
