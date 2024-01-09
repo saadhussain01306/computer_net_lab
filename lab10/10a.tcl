@@ -5,9 +5,9 @@
 #Create Simulator
 set ns [new Simulator]
 #Open Trace file and NAM file
-set ntrace [open prog1.tr w]
+set ntrace [open 10a.tr w]
 $ns trace-all $ntrace
-set namfile [open prog1.nam w]
+set namfile [open 10a.nam w]
 $ns namtrace-all $namfile
 #Finish Procedure
 proc Finish {} {
@@ -17,10 +17,10 @@ $ns flush-trace
 close $ntrace
 close $namfile
 #Execute the nam animation file
-exec nam prog1.nam &
+exec nam 10a.nam &
 #Show the number of packets dropped
-exec echo "The number of packet drops is " &
-exec grep -c "^d" prog1.tr &
+exec echo "The number of packet dropped is " &
+exec grep -c "^d" 10a.tr &
 exit 0
 }
 #Create 3 nodes
@@ -63,3 +63,6 @@ $ns at 5.0 "Finish"
 #Run the Simulation
 $ns run
 
+#output:-
+
+#The number of packet dropped is 8
