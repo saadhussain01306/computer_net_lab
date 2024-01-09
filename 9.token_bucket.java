@@ -16,7 +16,7 @@ public class Token_bucket{
         int token_gen_rate=in.nextInt();
         System.out.println("Enter the number of Cycles the host computer sends the Tokens to the bucket(at constant rate)");
         int n=in.nextInt();
-        System.out.println(String.format("%s\t%s\t%s\t%s", "TimeΔt", "Tokens Requested", "Tokens Sent", "Tokens Remaining in bucket"));
+        System.out.println(String.format("%s\t%s\t%s\t%s", "Time_t", "Tokens Requested", "Tokens Sent", "Tokens Remaining in bucket"));
         for(int i=0;i<n;i++){
             token_requested=token_gen_rate;
             if(token_requested+token_remaining>bucket_capacity){
@@ -39,7 +39,7 @@ Enter the Token generation rate (Rate at which tokens are sent to the bucket)
 2
 Enter the number of Cycles the host computer sends the Tokens to the bucket(at constant rate)
 6
-TimeΔt  Tokens Requested    Tokens Sent   Tokens Remaining in bucket
+Time_t  Tokens Requested    Tokens Sent   Tokens Remaining in bucket
 1             2                    2       2
 2             2                    2       4
 3             2                    1       5
@@ -55,7 +55,7 @@ Enter the Token generation rate (Rate at which tokens are sent to the bucket)
 2
 Enter the number of Cycles the host computer sends the Tokens to the bucket(at constant rate)
 6
-TimeΔt  Tokens Requested    Tokens Sent   Tokens Remaining in bucket
+Time_t  Tokens Requested    Tokens Sent   Tokens Remaining in bucket
 1             2                    2       2
 2             2                    2       4
 3             2                    1       5
