@@ -1,5 +1,5 @@
 #a. Implement an Ethernet LAN using n nodes and set multiple traffic 
-#nodes and plot congestion window for different source / destination.
+#nodes and plot congestion window for different source / destination
 
 # Create Simulator
 set ns [new Simulator]
