@@ -24,8 +24,3 @@ END{
 printf("The Throughput from n0 to n1: %fMbps\n",((count1*pack1*8)/(time1*1000000)));
 printf("The Throughput from n1 to n2: %fMbps\n",((count2*pack2*8)/(time2*1000000)));
 }
-
-/*output:-
-awk -f p4.awk p4.tr
-The Throughput from n0 to n1: 3534.273262Mbps
-The Throughput from n1 to n2: 0.001990Mbps*/
