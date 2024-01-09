@@ -9,10 +9,10 @@ $ns color 1 Blue
 $ns color 2 Red
 
 # Open trace and NAM trace file
-set ntrace [open prog5.tr w]
+set ntrace [open 11a.tr w]
 $ns trace-all $ntrace
 
-set namfile [open prog5.nam w]
+set namfile [open 11a.nam w]
 $ns namtrace-all $namfile
 
 # Use some flat file to create congestion graph windows
@@ -28,7 +28,7 @@ proc Finish {} {
     close $namfile
 
     # Execute the NAM animation file
-    exec nam prog5.nam &
+    exec nam 11a.nam &
 
     # Plot the Congestion Window graph using xgraph
     exec xgraph WinFile0 WinFile1 &
