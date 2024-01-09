@@ -72,6 +72,20 @@ Vertex   Distance from Source
 5               2
 */
 
+
+/*Enter the number of Vertices : 3
+Enter the Weight Matrix of Graph
+0 10 5
+0 0 -8
+0 0 0
+Enter the Source Vertex : 1
+Vertex   Distance from Source
+1               0
+2               10
+3               2
+*/
+
+
 /*
 Enter the number of Vertices : 3
 Enter the Weight Matrix of Graph
