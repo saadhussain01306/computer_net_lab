@@ -72,7 +72,7 @@ Enter the packets sizes one by one
 4
 6
 
-TimeΔt	P_size	accepted	sent	remaining
+Time_t	    P_size	  accepted	sent	 remaining
 1	        2	      2	        2	     0
 2	        3	      3	        2	     1
 3	        4	      4	        2	     3
