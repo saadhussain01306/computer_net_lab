@@ -13,9 +13,9 @@ $ns color 1 Blue
 $ns color 2 Red
 
 #Open trace and NAM trace file
-set ntrace [open prog2.tr w]
+set ntrace [open 10b.tr w]
 $ns trace-all $ntrace
-set namfile [open prog2.nam w]
+set namfile [open 10b.nam w]
 $ns namtrace-all $namfile
 
 #Finish Procedure
@@ -28,11 +28,11 @@ close $ntrace
 close $namfile
 
 #Execute the nam animation file
-exec nam prog2.nam &
+exec nam 10b.nam &
 
 #Find the number of ping packets dropped
 puts "The number of ping packets dropped are "
-exec grep "^d" prog2.tr | cut -d " " -f 5 | grep -c "ping" &
+exec grep "^d" 10b.tr | cut -d " " -f 5 | grep -c "ping" &
 exit 0
 }
 
@@ -95,3 +95,10 @@ $ns at 1.8 "Finish"
 
 #Run the Simulation
 $ns run
+
+
+#output
+#node 0 received ping answer from 5 with round trip time 151.2 ms
+#node 0 received ping answer from 5 with round trip time 301.4 ms
+#node 5 received ping answer from 0 with round trip time 155.4 ms
+#The number of ping packets dropped are 3
