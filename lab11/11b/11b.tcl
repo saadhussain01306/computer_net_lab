@@ -10,11 +10,11 @@ set topo [new Topography]
 $topo load_flatgrid 1500 1500
 
 #Open the NS trace file
-set tracefile [open p4.tr w]
+set tracefile [open 11b.tr w]
 $ns trace-all $tracefile
 
 #Open the NAM trace file
-set namfile [open p4.nam w]
+set namfile [open 11b.nam w]
 $ns namtrace-all $namfile
 $ns namtrace-all-wireless $namfile 1500 1500
 
@@ -112,9 +112,9 @@ $ns flush-trace
 close $tracefile
 close $namfile
 
-exec nam p4.nam &
+exec nam 11b.nam &
 exec echo "Number of packets dropped is:" & 
-exec grep -c "^D" p4.tr &
+exec grep -c "^D" 11b.tr &
 exit 0
 
 }
@@ -139,3 +139,11 @@ $ns run
 # SORTING LISTS ...DONE!
 # Number of packets dropped is:
 # root@calab:/home/cslab# 15605
+
+
+
+#running the awk file
+
+# awk -f 11b.awk 11b.tr
+# The Throughput from n0 to n1: 3534.273262Mbps
+# The Throughput from n1 to n2: 0.001990Mbps
